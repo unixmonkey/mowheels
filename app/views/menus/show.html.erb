@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Menu date:</strong>
+  <%= @menu.menu_date %>
+</p>
+
+<p>
+  <strong>Main dish1:</strong>
+  <%= @menu.main_dish1 %>
+</p>
+
+<p>
+  <strong>Main dish2:</strong>
+  <%= @menu.main_dish2 %>
+</p>
+
+<p>
+  <strong>Side1:</strong>
+  <%= @menu.side1 %>
+</p>
+
+<p>
+  <strong>Side2:</strong>
+  <%= @menu.side2 %>
+</p>
+
+<p>
+  <strong>Side3:</strong>
+  <%= @menu.side3 %>
+</p>
+
+<p>
+  <strong>Diet:</strong>
+  <%= @menu.diet %>
+</p>
+
+<%= link_to 'Edit', edit_menu_path(@menu) %> |
+<%= link_to 'Back', menus_path %>

@@ -1,0 +1,111 @@
+<h1>Listing recipients</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Postal code</th>
+      <th>Route number</th>
+      <th>Print sort</th>
+      <th>Coldpref1</th>
+      <th>Coldpref2</th>
+      <th>Hotpref</th>
+      <th>Recipients phone</th>
+      <th>Birthdate</th>
+      <th>Doctor name</th>
+      <th>Doctor phone</th>
+      <th>Diet</th>
+      <th>Substitutions</th>
+      <th>Contact name</th>
+      <th>Contact relationship</th>
+      <th>Contact work phone</th>
+      <th>Contact phone</th>
+      <th>Note</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Status</th>
+      <th>Referred by</th>
+      <th>Directions to home</th>
+      <th>Assisted</th>
+      <th>Payment details</th>
+      <th>Assistance amount</th>
+      <th>Billing name</th>
+      <th>Billing address</th>
+      <th>Billing city</th>
+      <th>Billing state</th>
+      <th>Billing zip</th>
+      <th>Termination reason</th>
+      <th>Mon hot</th>
+      <th>Tue hot</th>
+      <th>Wed hot</th>
+      <th>Thur hot</th>
+      <th>Fri hot</th>
+      <th>Sat hot</th>
+      <th>Sun hot</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recipients.each do |recipient| %>
+      <tr>
+        <td><%= recipient.first_name %></td>
+        <td><%= recipient.last_name %></td>
+        <td><%= recipient.address %></td>
+        <td><%= recipient.city %></td>
+        <td><%= recipient.state %></td>
+        <td><%= recipient.postal_code %></td>
+        <td><%= recipient.route_number %></td>
+        <td><%= recipient.print_sort %></td>
+        <td><%= recipient.coldpref1 %></td>
+        <td><%= recipient.coldpref2 %></td>
+        <td><%= recipient.hotpref %></td>
+        <td><%= recipient.recipients_phone %></td>
+        <td><%= recipient.birthdate %></td>
+        <td><%= recipient.doctor_name %></td>
+        <td><%= recipient.doctor_phone %></td>
+        <td><%= recipient.diet %></td>
+        <td><%= recipient.substitutions %></td>
+        <td><%= recipient.contact_name %></td>
+        <td><%= recipient.contact_relationship %></td>
+        <td><%= recipient.contact_work_phone %></td>
+        <td><%= recipient.contact_phone %></td>
+        <td><%= recipient.note %></td>
+        <td><%= recipient.start_date %></td>
+        <td><%= recipient.end_date %></td>
+        <td><%= recipient.status %></td>
+        <td><%= recipient.referred_by %></td>
+        <td><%= recipient.directions_to_home %></td>
+        <td><%= recipient.assisted %></td>
+        <td><%= recipient.payment_details %></td>
+        <td><%= recipient.assistance_amount %></td>
+        <td><%= recipient.billing_name %></td>
+        <td><%= recipient.billing_address %></td>
+        <td><%= recipient.billing_city %></td>
+        <td><%= recipient.billing_state %></td>
+        <td><%= recipient.billing_zip %></td>
+        <td><%= recipient.termination_reason %></td>
+        <td><%= recipient.mon_hot %></td>
+        <td><%= recipient.tue_hot %></td>
+        <td><%= recipient.wed_hot %></td>
+        <td><%= recipient.thur_hot %></td>
+        <td><%= recipient.fri_hot %></td>
+        <td><%= recipient.sat_hot %></td>
+        <td><%= recipient.sun_hot %></td>
+        <td><%= link_to 'Show', recipient %></td>
+        <td><%= link_to 'Edit', edit_recipient_path(recipient) %></td>
+        <td><%= link_to 'Destroy', recipient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recipient', new_recipient_path %>

@@ -1,0 +1,47 @@
+<h1>Listing recipient_menus</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Recipient</th>
+      <th>Menu</th>
+      <th>Menu date</th>
+      <th>Main dish1</th>
+      <th>Main dish2</th>
+      <th>Main dish choice</th>
+      <th>Side1</th>
+      <th>Side2</th>
+      <th>Side3</th>
+      <th>Side choice</th>
+      <th>Diet</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recipient_menus.each do |recipient_menu| %>
+      <tr>
+        <td><%= recipient_menu.recipient_id %></td>
+        <td><%= recipient_menu.menu_id %></td>
+        <td><%= recipient_menu.menu_date %></td>
+        <td><%= recipient_menu.main_dish1 %></td>
+        <td><%= recipient_menu.main_dish2 %></td>
+        <td><%= recipient_menu.main_dish_choice %></td>
+        <td><%= recipient_menu.side1 %></td>
+        <td><%= recipient_menu.side2 %></td>
+        <td><%= recipient_menu.side3 %></td>
+        <td><%= recipient_menu.side_choice %></td>
+        <td><%= recipient_menu.diet %></td>
+        <td><%= link_to 'Show', recipient_menu %></td>
+        <td><%= link_to 'Edit', edit_recipient_menu_path(recipient_menu) %></td>
+        <td><%= link_to 'Destroy', recipient_menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recipient menu', new_recipient_menu_path %>

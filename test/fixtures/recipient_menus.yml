@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  recipient_id: 1
+  menu_id: 1
+  menu_date: 2013-11-26
+  main_dish1: MyString
+  main_dish2: MyString
+  main_dish_choice: MyString
+  side1: MyString
+  side2: MyString
+  side3: MyString
+  side_choice: MyString
+  diet: MyString
+
+two:
+  recipient_id: 1
+  menu_id: 1
+  menu_date: 2013-11-26
+  main_dish1: MyString
+  main_dish2: MyString
+  main_dish_choice: MyString
+  side1: MyString
+  side2: MyString
+  side3: MyString
+  side_choice: MyString
+  diet: MyString

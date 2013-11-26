@@ -1,0 +1,39 @@
+<h1>Listing menus</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Menu date</th>
+      <th>Main dish1</th>
+      <th>Main dish2</th>
+      <th>Side1</th>
+      <th>Side2</th>
+      <th>Side3</th>
+      <th>Diet</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @menus.each do |menu| %>
+      <tr>
+        <td><%= menu.menu_date %></td>
+        <td><%= menu.main_dish1 %></td>
+        <td><%= menu.main_dish2 %></td>
+        <td><%= menu.side1 %></td>
+        <td><%= menu.side2 %></td>
+        <td><%= menu.side3 %></td>
+        <td><%= menu.diet %></td>
+        <td><%= link_to 'Show', menu %></td>
+        <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
+        <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Menu', new_menu_path %>

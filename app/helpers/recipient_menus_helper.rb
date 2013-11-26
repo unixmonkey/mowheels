@@ -1,0 +1,2 @@
+module RecipientMenusHelper
+end

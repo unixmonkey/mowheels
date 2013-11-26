@@ -1,0 +1,189 @@
+<%= form_for(@recipient) do |f| %>
+  <% if @recipient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recipient.errors.count, "error") %> prohibited this recipient from being saved:</h2>
+
+      <ul>
+      <% @recipient.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :postal_code %><br>
+    <%= f.text_field :postal_code %>
+  </div>
+  <div class="field">
+    <%= f.label :route_number %><br>
+    <%= f.number_field :route_number %>
+  </div>
+  <div class="field">
+    <%= f.label :print_sort %><br>
+    <%= f.number_field :print_sort %>
+  </div>
+  <div class="field">
+    <%= f.label :coldpref1 %><br>
+    <%= f.text_field :coldpref1 %>
+  </div>
+  <div class="field">
+    <%= f.label :coldpref2 %><br>
+    <%= f.text_field :coldpref2 %>
+  </div>
+  <div class="field">
+    <%= f.label :hotpref %><br>
+    <%= f.text_field :hotpref %>
+  </div>
+  <div class="field">
+    <%= f.label :recipients_phone %><br>
+    <%= f.text_field :recipients_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :birthdate %><br>
+    <%= f.date_select :birthdate %>
+  </div>
+  <div class="field">
+    <%= f.label :doctor_name %><br>
+    <%= f.text_field :doctor_name %>
+  </div>
+  <div class="field">
+    <%= f.label :doctor_phone %><br>
+    <%= f.text_field :doctor_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :diet %><br>
+    <%= f.text_field :diet %>
+  </div>
+  <div class="field">
+    <%= f.label :substitutions %><br>
+    <%= f.text_field :substitutions %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_name %><br>
+    <%= f.text_field :contact_name %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_relationship %><br>
+    <%= f.text_field :contact_relationship %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_work_phone %><br>
+    <%= f.text_field :contact_work_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_phone %><br>
+    <%= f.text_field :contact_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br>
+    <%= f.text_area :note %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br>
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br>
+    <%= f.date_select :end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :referred_by %><br>
+    <%= f.text_field :referred_by %>
+  </div>
+  <div class="field">
+    <%= f.label :directions_to_home %><br>
+    <%= f.text_area :directions_to_home %>
+  </div>
+  <div class="field">
+    <%= f.label :assisted %><br>
+    <%= f.text_field :assisted %>
+  </div>
+  <div class="field">
+    <%= f.label :payment_details %><br>
+    <%= f.text_area :payment_details %>
+  </div>
+  <div class="field">
+    <%= f.label :assistance_amount %><br>
+    <%= f.text_field :assistance_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :billing_name %><br>
+    <%= f.text_field :billing_name %>
+  </div>
+  <div class="field">
+    <%= f.label :billing_address %><br>
+    <%= f.text_field :billing_address %>
+  </div>
+  <div class="field">
+    <%= f.label :billing_city %><br>
+    <%= f.text_field :billing_city %>
+  </div>
+  <div class="field">
+    <%= f.label :billing_state %><br>
+    <%= f.text_field :billing_state %>
+  </div>
+  <div class="field">
+    <%= f.label :billing_zip %><br>
+    <%= f.text_field :billing_zip %>
+  </div>
+  <div class="field">
+    <%= f.label :termination_reason %><br>
+    <%= f.text_area :termination_reason %>
+  </div>
+  <div class="field">
+    <%= f.label :mon_hot %><br>
+    <%= f.text_field :mon_hot %>
+  </div>
+  <div class="field">
+    <%= f.label :tue_hot %><br>
+    <%= f.text_field :tue_hot %>
+  </div>
+  <div class="field">
+    <%= f.label :wed_hot %><br>
+    <%= f.text_field :wed_hot %>
+  </div>
+  <div class="field">
+    <%= f.label :thur_hot %><br>
+    <%= f.text_field :thur_hot %>
+  </div>
+  <div class="field">
+    <%= f.label :fri_hot %><br>
+    <%= f.text_field :fri_hot %>
+  </div>
+  <div class="field">
+    <%= f.label :sat_hot %><br>
+    <%= f.text_field :sat_hot %>
+  </div>
+  <div class="field">
+    <%= f.label :sun_hot %><br>
+    <%= f.text_field :sun_hot %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

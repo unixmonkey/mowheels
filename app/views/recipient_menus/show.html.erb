@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Recipient:</strong>
+  <%= @recipient_menu.recipient_id %>
+</p>
+
+<p>
+  <strong>Menu:</strong>
+  <%= @recipient_menu.menu_id %>
+</p>
+
+<p>
+  <strong>Menu date:</strong>
+  <%= @recipient_menu.menu_date %>
+</p>
+
+<p>
+  <strong>Main dish1:</strong>
+  <%= @recipient_menu.main_dish1 %>
+</p>
+
+<p>
+  <strong>Main dish2:</strong>
+  <%= @recipient_menu.main_dish2 %>
+</p>
+
+<p>
+  <strong>Main dish choice:</strong>
+  <%= @recipient_menu.main_dish_choice %>
+</p>
+
+<p>
+  <strong>Side1:</strong>
+  <%= @recipient_menu.side1 %>
+</p>
+
+<p>
+  <strong>Side2:</strong>
+  <%= @recipient_menu.side2 %>
+</p>
+
+<p>
+  <strong>Side3:</strong>
+  <%= @recipient_menu.side3 %>
+</p>
+
+<p>
+  <strong>Side choice:</strong>
+  <%= @recipient_menu.side_choice %>
+</p>
+
+<p>
+  <strong>Diet:</strong>
+  <%= @recipient_menu.diet %>
+</p>
+
+<%= link_to 'Edit', edit_recipient_menu_path(@recipient_menu) %> |
+<%= link_to 'Back', recipient_menus_path %>
