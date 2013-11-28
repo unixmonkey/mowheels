@@ -13,16 +13,18 @@
 
   <div class="field">
     <%= f.label :recipient_id %><br>
-    <%= f.number_field :recipient_id %>
+   <%# f.number_field :recipient_id %>
+   <%= f.collection_select :recipient_id, Recipient.all, :id, :first_last_name %>
   </div>
   <div class="field">
     <%= f.label :menu_id %><br>
-    <%= f.number_field :menu_id %>
+    <%# f.number_field :menu_id %>
+    <%= f.collection_select :menu_id, Menu.all, :id, :menu_date %>
   </div>
-  <div class="field">
-    <%= f.label :menu_date %><br>
-    <%= f.date_select :menu_date %>
-  </div>
+
+
+
+
   <div class="field">
     <%= f.label :main_dish1 %><br>
     <%= f.text_field :main_dish1 %>
