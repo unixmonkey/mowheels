@@ -22,8 +22,9 @@ gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 
 gem 'devise', '~> 3.1.1'
 
+gem 'prawn-labels'
+
 group :doc do
- 
   gem 'sdoc', require: false
 end
 

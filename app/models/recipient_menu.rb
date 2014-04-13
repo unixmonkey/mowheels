@@ -1,4 +1,4 @@
 class RecipientMenu < ActiveRecord::Base
-	belongs_to :recipients
-	belongs_to :menus
+	belongs_to :recipient
+	belongs_to :menu
 end

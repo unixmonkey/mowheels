@@ -5,6 +5,8 @@ Mowheels::Application.routes.draw do
 
   resources :recipients
 
+  resources :delivery
+
   devise_for :users
    root "pages#home"
    get "about" => "pages#about"

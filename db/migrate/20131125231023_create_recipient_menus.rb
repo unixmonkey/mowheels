@@ -1,8 +1,8 @@
 class CreateRecipientMenus < ActiveRecord::Migration
   def change
     create_table :recipient_menus do |t|
-      t.integer :recipient_id
-      t.integer :menu_id
+      t.integer :recipient_id, :null => false
+      t.integer :menu_id, :null => false
       t.date :menu_date
       t.string :main_dish1
       t.string :main_dish2

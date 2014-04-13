@@ -1,0 +1,26 @@
+ <h1>Listing Deliveries</h1>
+
+<table class="table table-striped">
+ 
+
+  <tbody>
+    <% @delivery.each do |delivery| %>
+      <tr>
+          <td><%= delivery.menu_date %></td>
+          <td><%= delivery.route_number %></td>
+          <td><%= delivery.first_name %></td>
+          <td><%= delivery.last_name %></td>
+          <td><%= delivery.menu_date %></td>
+          <td><%= delivery.main_dish1 %></td>
+          <td><%= delivery.main_dish2 %></td>
+          <td><%= delivery.main_dish_choice %></td>
+          <td><%= delivery.side1 %></td>
+          <td><%= delivery.side2 %></td>
+          <td><%= delivery.side3 %></td>
+          <td><%= delivery.side_choice %></td>
+          <td><%= delivery.diet %></td>
+   
+      </tr>
+    <% end %>
+  </tbody>
+</table>
