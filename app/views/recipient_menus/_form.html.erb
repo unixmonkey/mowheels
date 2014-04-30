@@ -27,7 +27,9 @@
 
   <div class="field">
     <%= f.label :main_dish1 %><br>
+    <%= main_dish1 =  Menu.find(id) %>
     <%= f.text_field :main_dish1 %>
+  
   </div>
   <div class="field">
     <%= f.label :main_dish2 %><br>
