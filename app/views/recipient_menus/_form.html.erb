@@ -1,4 +1,4 @@
-<%= form_for(@recipient_menu) do |f| %>
+x<%= form_for(@recipient_menu) do |f| %>
   <% if @recipient_menu.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@recipient_menu.errors.count, "error") %> prohibited this recipient_menu from being saved:</h2>
@@ -16,50 +16,74 @@
    <%# f.number_field :recipient_id %>
    <%= f.collection_select :recipient_id, Recipient.all, :id, :first_last_name %>
   </div>
+
+ 
+
   <div class="field">
     <%= f.label :menu_id %><br>
-    <%# f.number_field :menu_id %>
-    <%= f.collection_select :menu_id, Menu.all, :id, :menu_date %>
+   <%# f.number_field :menu_id %>
+   <%= f.collection_select :menu_id, Menu.all, :id, :menu_date  %>
+     <% if @menu %>
+   <%=  @menu.menu_id %>
+     <% end %>
   </div>
-
-
 
 
   <div class="field">
     <%= f.label :main_dish1 %><br>
-    <%= main_dish1 =  Menu.find(id) %>
-    <%= f.text_field :main_dish1 %>
-  
+      <% if @menu %>
+        <%= @menu.main_dish1 %>
+      <% end %>
+
   </div>
+
   <div class="field">
     <%= f.label :main_dish2 %><br>
-    <%= f.text_field :main_dish2 %>
-  </div>
+        <% if @menu %>
+     <%= @menu.main_dish2 %>
+  <% end %>
+
   <div class="field">
     <%= f.label :main_dish_choice %><br>
     <%= f.text_field :main_dish_choice %>
   </div>
+
+
   <div class="field">
     <%= f.label :side1 %><br>
-    <%= f.text_field :side1 %>
+        <% if @menu %>
+    <%= @menu.side1 %>
+        <% end %>
   </div>
+
   <div class="field">
     <%= f.label :side2 %><br>
-    <%= f.text_field :side2 %>
+        <% if @menu %>
+    <%= @menu.side2 %>
+        <% end %>
   </div>
+
   <div class="field">
     <%= f.label :side3 %><br>
-    <%= f.text_field :side3 %>
+        <% if @menu %>
+    <%= @menu.side3 %>
+         <% end %>
   </div>
+
   <div class="field">
     <%= f.label :side_choice %><br>
     <%= f.text_field :side_choice %>
   </div>
+
   <div class="field">
     <%= f.label :diet %><br>
-    <%= f.text_field :diet %>
+        <% if @menu %>
+     <%= @menu.diet %>
+        <% end %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>

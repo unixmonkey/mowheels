@@ -15,6 +15,9 @@ class RecipientMenusController < ApplicationController
   # GET /recipient_menus/new
   def new
     @recipient_menu = RecipientMenu.new
+      if @Menu
+        @menu = Menu.find params[:menu_id]
+      end   
   end
 
   # GET /recipient_menus/1/edit
