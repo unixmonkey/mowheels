@@ -23,9 +23,7 @@ x<%= form_for(@recipient_menu) do |f| %>
     <%= f.label :menu_id %><br>
    <%# f.number_field :menu_id %>
    <%= f.collection_select :menu_id, Menu.all, :id, :menu_date  %>
-     <% if @menu %>
-   <%=  @menu.menu_id %>
-     <% end %>
+  
   </div>
 
 
