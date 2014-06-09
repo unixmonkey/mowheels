@@ -11,13 +11,16 @@ x<%= form_for(@recipient_menu) do |f| %>
     </div>
   <% end %>
 
+
+
   <div class="field">
     <%= f.label :recipient_id %><br>
    <%# f.number_field :recipient_id %>
    <%= f.collection_select :recipient_id, Recipient.all, :id, :first_last_name %>
   </div>
 
- 
+<%# I am trying to find the menu_id selected by the user below and then %>
+<%# get the menu object to be used main_dish1 , main_dish2, etc%>
 
   <div class="field">
     <%= f.label :menu_id %><br>
