@@ -16,7 +16,8 @@ x<%= form_for(@recipient_menu) do |f| %>
   <div class="field">
     <%= f.label :recipient_id %><br>
    <%# f.number_field :recipient_id %>
-   <%= f.collection_select :recipient_id, Recipient.all, :id, :first_last_name %>
+   <%= f.collection_select(:recipient_id, Recipient.all, :id, :first_last_name, {:selected => @recipient.try(:id)},
+     {:data => { :remote => true } }) %>
   </div>
 
 <%# I am trying to find the menu_id selected by the user below and then %>
@@ -25,7 +26,8 @@ x<%= form_for(@recipient_menu) do |f| %>
   <div class="field">
     <%= f.label :menu_id %><br>
    <%# f.number_field :menu_id %>
-   <%= f.collection_select :menu_id, Menu.all, :id, :menu_date  %>
+   <%= f.collection_select :menu_id, Menu.all, :id, :menu_date, {:selected => @menu.try(:id)},
+     {:data => { :remote => true } } %>
   
   </div>
 
@@ -33,7 +35,7 @@ x<%= form_for(@recipient_menu) do |f| %>
   <div class="field">
     <%= f.label :main_dish1 %><br>
       <% if @menu %>
-        <%= @menu.main_dish1 %>
+        <%= @menu.main_dish1 %>r
       <% end %>
 
   </div>
