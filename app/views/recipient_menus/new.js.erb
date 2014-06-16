@@ -1,1 +1,13 @@
-$('#new_recipient_menu').html('<%= escape_javascript render("form") %>');
+<%
+  main_choices = [@menu.main_dish1, @menu.main_dish2].compact.map{|m| content_tag :option, m }.join('').html_safe
+  side_choices = [@menu.side1, @menu.side2, @menu.side3].compact.map{|s| content_tag :option, s }.join('').html_safe
+%>
+$('#recipient_menu_main_dish_choice').html(
+  '<%= escape_javascript main_choices %>'
+)
+
+$('#recipient_menu_side_choice').html(
+  '<%= escape_javascript side_choices %>'
+)
+
+$('#recipient_menu_diet').val('<%= escape_javascript @menu.diet %>')

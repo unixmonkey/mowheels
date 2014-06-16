@@ -15,12 +15,10 @@ class RecipientMenusController < ApplicationController
   # GET /recipient_menus/new
   def new
     @recipient_menu = RecipientMenu.new
-      if params[:recipient_menu] && params[:recipient_menu][:recipient_id]
-        @recipient = Recipient.find params[:recipient_menu][:recipient_id]
-      end
-      if params[:recipient_menu] && params[:recipient_menu][:menu_id]
-        @menu = Menu.find params[:recipient_menu][:menu_id]
-      end
+
+    if params[:recipient_menu] && params[:recipient_menu][:menu_id]
+      @menu = Menu.find params[:recipient_menu][:menu_id]
+    end
     respond_to do |format|
       format.html
       format.js

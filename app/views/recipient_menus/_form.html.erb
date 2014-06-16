@@ -16,8 +16,7 @@ x<%= form_for(@recipient_menu) do |f| %>
   <div class="field">
     <%= f.label :recipient_id %><br>
    <%# f.number_field :recipient_id %>
-   <%= f.collection_select(:recipient_id, Recipient.all, :id, :first_last_name, {:selected => @recipient.try(:id)},
-     {:data => { :remote => true } }) %>
+   <%= f.collection_select(:recipient_id, Recipient.all, :id, :first_last_name, {:selected => @recipient.try(:id)}) %>
   </div>
 
 <%# I am trying to find the menu_id selected by the user below and then %>
@@ -25,64 +24,24 @@ x<%= form_for(@recipient_menu) do |f| %>
 
   <div class="field">
     <%= f.label :menu_id %><br>
-   <%# f.number_field :menu_id %>
-   <%= f.collection_select :menu_id, Menu.all, :id, :menu_date, {:selected => @menu.try(:id)},
-     {:data => { :remote => true } } %>
-  
+    <%= f.collection_select :menu_id, Menu.all, :id, :menu_date,
+      { selected: @menu.try(:id), include_blank: true },
+      { data: { remote: true } } %>
   </div>
-
-
-  <div class="field">
-    <%= f.label :main_dish1 %><br>
-      <% if @menu %>
-        <%= @menu.main_dish1 %>r
-      <% end %>
-
-  </div>
-
-  <div class="field">
-    <%= f.label :main_dish2 %><br>
-        <% if @menu %>
-     <%= @menu.main_dish2 %>
-  <% end %>
 
   <div class="field">
     <%= f.label :main_dish_choice %><br>
-    <%= f.text_field :main_dish_choice %>
-  </div>
-
-
-  <div class="field">
-    <%= f.label :side1 %><br>
-        <% if @menu %>
-    <%= @menu.side1 %>
-        <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :side2 %><br>
-        <% if @menu %>
-    <%= @menu.side2 %>
-        <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :side3 %><br>
-        <% if @menu %>
-    <%= @menu.side3 %>
-         <% end %>
+    <%= f.select :main_dish_choice, [] %>
   </div>
 
   <div class="field">
     <%= f.label :side_choice %><br>
-    <%= f.text_field :side_choice %>
+    <%= f.select :side_choice, [] %>
   </div>
 
   <div class="field">
     <%= f.label :diet %><br>
-        <% if @menu %>
-     <%= @menu.diet %>
-        <% end %>
+    <%= f.text_field :diet %>
   </div>
 
   <div class="actions">
